@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
 
 * {
   margin: 0;
@@ -7,39 +7,97 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-
-  /* background-image: radial-gradient(
-    circle farthest-corner at 83.7% 4.3%,
-    rgba(173, 0, 171, 1) 0%,
-    rgba(15, 51, 92, 1) 90%
-  ); */
-
-  background-image: linear-gradient(
-    112.1deg,
-    rgba(32, 38, 57, 1) 11.4%,
-    rgba(63, 76, 119, 1) 70.2%
-  );
+  font-family: 'Poppins', sans-serif;
+  background-color: #070f27;
+  overflow: hidden;
+  background-image: radial-gradient(
+      at 100% 100%,
+      hsl(225, 70%, 9%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 90% 10%, hsl(220.94, 43%, 39%) 0, transparent 55%);
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   height: 100vh;
 }
 
+.header-left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: #070f27; */
+  /* background-color: #071329; */
+  padding-left: 120px;
+  padding-right: 50px;
+}
+
+.header-left h1 span {
+  color: #4c6bf8;
+  font-weight: 900;
+}
+
+.content h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 2rem;
+  margin-bottom: 48px;
+}
+
+.logo {
+  font-size: 24px;
+  color: #4c6bf8;
+  font-weight: 600;
+}
+
+.social a {
+  font-size: 14px;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  background-color: #2249f3;
+  transition: all 200ms ease-in-out;
+  border-radius: 50px;
+}
+
+.social a:hover {
+  background-color: rgba(47, 83, 245, 0.5);
+}
+
+.social .fa {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #161e42; */
+  border-top-left-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+
 .calculator {
+  /* display: none; */
   margin: 0 auto;
   text-align: center;
-  width: 350px;
-
-  /* Glass */
-  background: rgba(255, 255, 255, 0.25);
+  width: 300px;
+  padding: 8px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -48,10 +106,10 @@ body {
   height: 120px;
   padding: 0 20px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(7, 15, 39, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: right;
-  font-size: 36px;
+  font-size: 32px;
   color: #fff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -70,17 +128,25 @@ body {
 
 button {
   height: 80px;
-  background-color: transparent;
+  background-color: rgba(7, 15, 39, 0.9);
   border: none;
-  font-size: 24px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.7);
   width: 25%;
   outline: none;
   transition: all 300ms ease-in-out;
 }
 
+button.equal-sign {
+  border-bottom-right-radius: 10px;
+}
+
+button.rounded-border {
+  border-bottom-left-radius: 10px;
+}
+
 button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: rgba(255, 255, 255, 1);
@@ -94,5 +160,5 @@ button:hover {
 .equal-sign,
 .all-clear,
 .percentage {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(7, 15, 39, 0.8);
 }
